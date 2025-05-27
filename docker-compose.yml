@@ -1,0 +1,16 @@
+---
+services:
+  minecraft:
+    image: thenucl3on/minecraft:1.21.5
+    container_name: minecraft-1.21.5
+    ports:
+      - 25565:25565
+    volumes:
+      - ./data:/minecraft/data
+    environment:
+      EULA: true
+      RAMAX: 8192M
+      RAMIN: 1024M
+    stdin_open: true
+    tty: true
+    restart: always
